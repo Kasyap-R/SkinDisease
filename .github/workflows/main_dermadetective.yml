@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'DermaDetective'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CED00BF2983748AAAB34F6E4A853586F }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A959E7CCB36E424586AE0CA0AB6F3786 }}
           package: .
