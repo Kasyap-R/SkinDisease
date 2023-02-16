@@ -28,6 +28,7 @@ fileDropArea.addEventListener("drop", (e) => {
         displayImage(files[0]);
         createChangeButton();
         imagePresent = true;
+        sendImage();
     } else 
     {
         console.log("Fail");
@@ -36,6 +37,28 @@ fileDropArea.addEventListener("drop", (e) => {
     dropText.classList.remove("hover");
 
 });
+
+function sendImage() {
+    const data = {
+        name: files[0].name,
+        file: files[0]
+    };
+    
+    fetch('https://skinanalysis.azurewebsites.net/api/ImageAnalysis1?code=9g-BzxrrTQlcJXa2CbHCHPlZDRPdLL5Qn4XV23iQ0MtOAzFuEFkLiA==', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Success:', data);
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+}
 
 function displayImage(jpegFile) {
     let img = document.createElement("img");
