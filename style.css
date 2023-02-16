@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Roboto', sans-serif;
+    background: linear-gradient(180.3deg, rgb(221, 221, 221) 5.5%, rgb(110, 136, 161) 90.2%);
+    min-height: 100vh;
+    font-weight: 600;
+}
+
+.landing-head {
+    font-size: 3rem;
+    text-align: center;
+    padding: 3rem;
+}
+
+.file-input-container{
+    min-width: 60%;
+    width: fit-content;
+    min-height: 70vh;
+    height: fit-content;
+    margin: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    border-radius: 3rem;
+    padding: 5rem;
+}
+
+.file-drop-text {
+    width: 80%;
+    height: 30vh;
+    font-size: 1.5rem;
+    transition: font-size 0.2s ease;
+    border: 3px dashed rgba(31, 203, 233, 0.596);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.file-drop-text.hover {
+    font-size: 1.2rem;
+    border: 5px dashed rgba(31, 203, 233, 0.596);
+    transition: font-size 0.2s ease;
+}
+
+.invalid-warning {
+    margin-top: 3rem;
+    color: red;
+    display: none;
+}
+
+.change-image-btn {
+    margin-top: 3rem;
+    font-size: 1.25rem;
+    padding: 0.4rem;
+}
+
+.uploaded-image {
+    max-width: 800px;
+    height: 600px;
+}
+
+.results-container {
+    width: 60%;
+    margin: auto;
+    height: 30vh;
+    background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    border-radius: 3rem;
+    margin-top: 3rem;
+    padding: 4rem;
+    margin-bottom: 6rem;
+}
+
+.results-text {
+    font-size: 1.5rem;
+}
