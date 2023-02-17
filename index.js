@@ -40,17 +40,13 @@ fileDropArea.addEventListener("drop", (e) => {
 });
 
 function sendImage() {
-    const data = {
-        name: files[0].name,
-        file: files[0]
-    };
-    
+    const data = new FormData();
+    data.append('file', files[0]);
+    data.append('fileName', files[0].name);
+
     fetch('https://skinanalysis.azurewebsites.net/api/ImageAnalysis1?code=9g-BzxrrTQlcJXa2CbHCHPlZDRPdLL5Qn4XV23iQ0MtOAzFuEFkLiA==', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
+        body: data
     })
     .then(response => response.json())
     .then(data => {
