@@ -24,6 +24,7 @@ fileDropArea.addEventListener("drop", (e) => {
     files = e.dataTransfer.files;
     if (files[0].type === "image/jpeg") {
         invalidFileWarning.style.display = "none";
+        console.log(files[0]);
         dropText.style.display = "none";
         displayImage(files[0]);
         createChangeButton();
@@ -53,7 +54,7 @@ function sendImage() {
     })
     .then(response => response.json())
     .then(data => {
-        console.log('Success:', data);
+        console.log('Success:', data.body.message);
     })
     .catch((error) => {
         console.error('Error:', error);
