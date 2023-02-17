@@ -54,7 +54,7 @@ function sendImage() {
     })
     .then(response => response.json())
     .then(data => {
-        console.log('Success:', data.body.message);
+        console.log('Success:', data);
     })
     .catch((error) => {
         console.error('Error:', error);
